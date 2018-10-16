@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>超市管理系统</title>
+		<script language="javascript">
+	
+	function opMenu(n)
+	{		
+		
+		if (document.getElementById("div"+n).style.display=="")
+		{
+			document.getElementById("div"+n).style.display="block";
+			
+		}
+		if(document.getElementById("div"+n).style.display == "block")
+		{
+			document.getElementById("div"+n).style.display="none";
+			changeico('img'+n,"down");
+		}
+		else
+		{
+		
+			document.getElementById("div"+n).style.display="block";
+			changeico('img'+n,"up");
+		}
+		
+	}
+	function changeico(imgn,imgname)
+	{
+		document.getElementById(imgn).style.background="url(IMG/"+imgname+".gif)";
+	}
+	function changeimg(imgn)
+	{
+		
+		if(document.getElementById(imgn).style.background=="")
+		{
+			document.getElementById(imgn).style.background="url(IMG/up1.gif)";
+		}
+		
+		if(document.getElementById(imgn).style.background=="url(IMG/up.gif)")
+		{
+			document.getElementById(imgn).style.background="url(IMG/up1.gif)";
+		}
+		
+		if(document.getElementById(imgn).style.background=="url(IMG/down.gif)")
+		{
+			document.getElementById(imgn).style.background="url(IMG/down1.gif)";
+		}
+		
+	}
+		function resetimg(imgn)
+	{
+		if(document.getElementById(imgn).style.background=="")
+		{
+			document.getElementById(imgn).style.background="url(IMG/up.gif)";
+		}
+		if(document.getElementById(imgn).style.background=="url(IMG/up1.gif)")
+		{
+			document.getElementById(imgn).style.background="url(IMG/up.gif)";
+		}
+		
+		if(document.getElementById(imgn).style.background=="url(IMG/down1.gif)")
+		{
+			document.getElementById(imgn).style.background="url(IMG/down.gif)";
+		}
+		
+	}
+	
+</script>
+
+		<link href="css/Menu.css" rel="stylesheet" type="text/css" />
+		<style type="text/css">
+<!--
+a:link {
+	color: #215DC6;
+	text-decoration: none;
+}
+a:visited {
+	color: #215DC6;
+	text-decoration: none;
+}
+a:hover{
+	
+	text-decoration: underline;
+
+}
+a:active {
+	text-decoration: none;
+}
+
+-->
+</style>
+	</head>
+
+	<body>
+		<br />
+		<table name="num1" border="0" height="26px" cellpadding="0"
+			cellspacing="0" onclick="opMenu('2');"
+			onmouseover="changeimg('img2');this.style.color='#7495E2';"
+			onmouseout="resetimg('img2');this.style.color='#215DC6';"
+			class="paneltable">
+			<tr>
+				<td style="background-image:url(IMG/top.gif);" width="160px">
+					<B style="margin-left:10px;"> 商品管理</B>
+				</td>
+				<td id="img2" align="right" width="25px"
+					style="background-image:url(IMG/up.gif)">
+				</td>
+			</tr>
+		</table>
+
+		<div id="div2">
+			<table border="0" class="contenttable">
+				<tr>
+
+					<td>
+						<a href="CargoListConf" target="mainFrame">商品列表</a>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<a href="CargoType" target="mainFrame">商品分类</a>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<a href="StorageList" target="mainFrame">库存管理</a>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<a href="Stock.jsp" target="mainFrame">进货管理</a>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+
+		<br />
+		
+			<table name="num2" border="0" height="26px" cellpadding="0"
+				cellspacing="0" onclick="opMenu('3');"
+				onmouseover="changeimg('img3');this.style.color='#7495E2';"
+				onmouseout="resetimg('img3');this.style.color='#215DC6';"
+				class="paneltable">
+				<tr>
+					<td style="background-image:url(IMG/top.gif);" width="160px">
+						<B style="margin-left:10px;">人力资源</B>
+					</td>
+					<td id="img3" align="right" width="25px"
+						style="background-image:url(IMG/up.gif)">
+					</td>
+				</tr>
+			</table>
+		
+		<div id="div3">
+			<table border="0" class="contenttable">
+				<tr>
+
+					<td>
+						<a href="EmployeeServlet" target="mainFrame">员工列表</a>
+					</td>
+				</tr>
+
+			</table>
+
+		</div>
+
+		<br />
+		
+			<table name="num3" border="0" height="26px" cellpadding="0"
+				cellspacing="0" onclick="opMenu('4');"
+				onmouseover="changeimg('img4');this.style.color='#7495E2';"
+				onmouseout="resetimg('img4');this.style.color='#215DC6';"
+				class="paneltable">
+				<tr>
+					<td style="background-image:url(IMG/top.gif);" width="160px">
+						<B style="margin-left:10px;">供应商管理</B>
+					</td>
+					<td id="img4" align="right" width="25px"
+						style="background-image:url(IMG/up.gif)">
+					</td>
+				</tr>
+			</table>
+		
+		<div id="div4">
+			<table border="0" class="contenttable">
+				<tr>
+
+					<td>
+						<a href="proLogin" target="mainFrame">供应商列表</a>
+					</td>
+				</tr>
+				<tr>
+
+					<td>
+						<a href="proType" target="mainFrame">供应商类别</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<br />
+
+			<table name="num4" border="0" height="26px" cellpadding="0"
+				cellspacing="0" onclick="opMenu('5');"
+				onmouseover="changeimg('img5');this.style.color='#7495E2';"
+				onmouseout="resetimg('img5');this.style.color='#215DC6';"
+				class="paneltable">
+				<tr>
+					<td style="background-image:url(IMG/top.gif);" width="160px">
+						<B style="margin-left:10px;">权限管理</B>
+					</td>
+					<td id="img5" align="right" width="25px"
+						style="background-image:url(IMG/up.gif)">
+					</td>
+				</tr>
+			</table>
+		<div id="div5">
+			<table border="0" class="contenttable">
+				<tr>
+
+					<td>
+						<a href="manaView" target="mainFrame">管理员列表</a>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+		<br />
+		<br />
+	</body>
+</html>

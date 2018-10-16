@@ -1,0 +1,46 @@
+body{
+margin:0;
+background-color:#687FD9;
+margin-left:10px;
+
+}
+#div1 {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	width:185px;
+	height:2px;
+	cursor:hand;
+}
+
+div {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	width:185px;
+	height:100px;
+	background-color:#D6DFF7;
+	color:#215DC6;
+	display:block;
+	
+	
+	
+}
+
+.contenttable{
+
+margin-left:10px;
+}
+contenttable td{
+height:20px;
+}
+.paneltable{
+background-image:url(../IMG/top.gif);
+cursor:hand;
+margin-left:0;
+color:#215DC6;
+font-size:12px;"
+
+}
